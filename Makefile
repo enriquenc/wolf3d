@@ -30,8 +30,8 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	gcc $(OBJ) -o $(NAME) $(INCLUDES)
 
-%.o: %.cpp
-	gcc $(FLAGS) -o $@ -c $<
+%.o: %.c
+	gcc $(FLAGS)  -o $@ -c $< 
 
 clean:
 	rm -f $(OBJ)
